@@ -16,7 +16,7 @@ function InputForm() {
 
   function changeDeposit(e) {
 
-     const changedDeposit = (e.target.value == "") ? (e.target.value = 0) : parseInt(e.target.value)
+     const changedDeposit = (e.target.value === "") ? (e.target.value = 0) : parseInt(e.target.value)
     setDeposit(parseInt(e.target.value));
     calcMoney({investinit, deposit: changedDeposit,interest});
   }
@@ -58,7 +58,7 @@ function InputForm() {
       <div className="form-wrap">
         <form>
           <div className="form-body">
-          {((valueArray == "") || (isNaN(valueArray[1].totalAmount))) && <h2>Please input values</h2>}
+          {((valueArray === "") || (isNaN(valueArray[1].totalAmount))) && <h2>Please input values</h2>}
             <div className="form-item">
               <label>Investment Amount $</label>
               <input
@@ -66,7 +66,6 @@ function InputForm() {
                 onChange={changeInit}
                 value={investinit}
                 placeholder="Investment Amount (required)"
-                min="0"
                 step="100"
                 required
               />
@@ -89,7 +88,6 @@ function InputForm() {
                 onChange={changeInterest}
                 value={interest}
                 placeholder="Annual interest (required)"
-                min="0"
                 step="0.1"
                 required
               />

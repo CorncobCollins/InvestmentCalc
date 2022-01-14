@@ -1,3 +1,4 @@
+/*general section */
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -24,6 +25,17 @@ body {
   display: flex;
   margin: auto;
 }
+.container-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 1rem;
+}
+.container-two {
+  display: flex;
+  place-content: center;
+}
+/*header section */
 .header {
   text-align: center;
   font-size: 2.5rem;
@@ -31,18 +43,10 @@ body {
 }
 .header h1 {
   margin-top: 30px;
-  color:white
+  color: white;
 }
-.container-one {
-  padding-bottom: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-.container-two {
-  display: flex;
-  place-content: center;
-}
+
+/*form section */
 .form-wrap {
   height: fit-content;
   max-height: 490px;
@@ -53,7 +57,6 @@ body {
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-
 }
 
 .form-body {
@@ -80,11 +83,17 @@ input {
   font-family: "Staatliches", cursive;
   font-size: 1.5rem;
 }
-.recharts-wrapper{
-  left:5%;
+/* chart section */
+.placer {
+  margin-top: 1rem;
+ margin-left: auto;
+ margin-right: auto;
+}
+.recharts-wrapper {
+  left: 3%;
 }
 .chart-wrap {
-  height:600px;
+  height: 600px;
   width: 800px;
   place-content: center;
   background: rgba(255, 255, 255, 0.25);
@@ -102,10 +111,11 @@ input {
   margin-right: auto;
 }
 span {
-  color:white;
+  color: white;
 }
+/* table section */
 .table-wrapper {
-  width:fit-content; 
+  width: fit-content;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10.5px);
@@ -113,7 +123,7 @@ span {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1rem;
-  margin: 1rem
+  margin: 1rem;
 }
 
 table {
@@ -122,10 +132,10 @@ table {
 td {
   padding: 6px;
   font-size: 1.5rem;
-  border: 1px solid black
+  border: 1px solid black;
 }
 .no-border {
-  border:none;
+  border: none;
 }
 
 .table-header {
@@ -134,9 +144,9 @@ td {
   padding-right: 3px;
 }
 
-
+/* footer section */
 .footer {
-  position:relative;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: block;
@@ -151,7 +161,4 @@ td {
   .wrapper {
     margin-top: 20px;
   }
-}
-span {
-  color: white;
 }

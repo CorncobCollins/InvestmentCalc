@@ -5,7 +5,6 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Tooltip,
   Legend,
 } from "recharts";
 import { ValueArrayContext } from "./ValueArrayContext";
@@ -14,7 +13,7 @@ function Chart() {
   const [valueArray, ] = useContext(ValueArrayContext);
   if (valueArray !== "" && !isNaN(valueArray[1].totalAmount)){
   return (
-    <div className="wrapper">
+    <div className="placer">
       <div className="chart-wrap">
         <h1 className="annoucer">
           After five years your investment will be  worth <span>{valueArray[60].totalAmount}{"\u00A0"}$</span> with a total yield of <span>{valueArray[60].totalYield}$</span>
@@ -49,8 +48,9 @@ function Chart() {
           />
           <YAxis
             type="number"
+            dataKey="totalAmount"
             stroke="white"
-            label={{ value: "Total Value", angle: -90, dx: -20 }}
+            label={{ value: "Value in $", angle: -90, dx: -20 }}
           />
           <Legend
             align="left"
@@ -60,12 +60,10 @@ function Chart() {
               bottom: "10px",
             }}
           />
-          <Tooltip />
         </LineChart>
       </div>
-    </div>
+      </div>
   );
-  console.log(valueArray)
 }
 else return ("")
 }

@@ -17,7 +17,7 @@ function Chart() {
     <div className="wrapper">
       <div className="chart-wrap">
         <h1 className="annoucer">
-          After five years your investment <br /> will be  worth <span>{valueArray[60].totalAmount}{"\u00A0"}$</span> with a total yield of <span>{valueArray[60].totalYield}$</span>
+          After five years your investment will be  worth <span>{valueArray[60].totalAmount}{"\u00A0"}$</span> with a total yield of <span>{valueArray[60].totalYield}$</span>
         </h1>
 
         <LineChart
@@ -32,13 +32,15 @@ function Chart() {
             name="Total Amount"
             stroke="black"
             dot={false}
+            yAxisId="left"
           />
           <Line
             type="monotone"
             dataKey="totalYield"
             name="Total Yield"
-            stroke="yellow" 
+            stroke="white" 
             dot={false}
+            yAxisId="right"
           />
           <CartesianGrid stroke="white" />
           <XAxis
@@ -50,7 +52,16 @@ function Chart() {
           <YAxis
             type="number"
             stroke="white"
-            label={{ value: "Total/Yield", angle: -90, dx: -30 }}
+            yAxisId="left"
+            label={{ value: "Total Value", angle: -90, dx: -20 }}
+          />
+           <YAxis
+            type="number"
+            dataKey="totalYield"
+            stroke="white"
+            yAxisId="right"
+            label={{ value: "Total Yield", angle: 90, dx: 20, fill:"white"}}
+            orientation="right"
           />
           <Legend
             align="left"

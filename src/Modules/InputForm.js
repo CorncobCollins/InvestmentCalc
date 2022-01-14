@@ -43,9 +43,9 @@ function InputForm() {
       var totalInvested= moneyValues.investinit + totalMonthly;
 
       bigArr.push({
-        totalAmount: parseFloat(Math.round(newTotal)).toFixed(2),
+        totalAmount: parseFloat(newTotal).toFixed(2),
         id: i,
-        totalYield: parseFloat(Math.round(gain)).toFixed(2),
+        totalYield: parseFloat(gain).toFixed(2),
         totalMonthly: totalMonthly,
         totalInvested: totalInvested,
       });

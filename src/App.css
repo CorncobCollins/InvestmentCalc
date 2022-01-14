@@ -16,12 +16,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(45deg, #9980fa, #0652dd) fixed;
+  background: linear-gradient(45deg, #9b59b6, #3498db) fixed;
   font-family: "Staatliches", cursive;
 }
 .wrapper {
   justify-content: center;
   display: flex;
+  margin: auto;
 }
 .header {
   text-align: center;
@@ -39,16 +40,16 @@ body {
   grid-template-rows: 1fr;
 }
 .form-wrap {
+  height: fit-content;
+  max-height: 490px;
   padding: 2rem;
-  place-content: center;
-  align-items: center;
-  justify-content: center;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .form-body {
@@ -80,7 +81,7 @@ input {
 }
 .chart-wrap {
   height:600px;
-  width: 850px;
+  width: 800px;
   place-content: center;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -108,14 +109,14 @@ span {
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 1rem;
 }
 table {
   border-collapse: collapse;
 }
 td {
-  padding: 3px;
+  padding: 6px;
   font-size: 1.5rem;
   border: 1px solid black
 }
@@ -146,4 +147,7 @@ td {
   .wrapper {
     margin-top: 20px;
   }
+}
+span {
+  color: white;
 }

@@ -33,11 +33,15 @@ body {
   margin-top: 30px;
   color:white
 }
-.firstContainer {
+.container-one {
   padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+}
+.container-two {
+  display: flex;
+  place-content: center;
 }
 .form-wrap {
   height: fit-content;
@@ -101,8 +105,7 @@ span {
   color:white;
 }
 .table-wrapper {
-  display:inline-flex;
-  justify-content: center;
+  width:fit-content; 
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10.5px);
@@ -110,8 +113,9 @@ span {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem
 }
+
 table {
   border-collapse: collapse;
 }
@@ -140,7 +144,7 @@ td {
 }
 
 @media (max-width: 1540px) {
-  .firstContainer {
+  .container-one {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }

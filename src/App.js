@@ -12,13 +12,15 @@ function App() {
     <div>
       <Header />
       <ValueArrayProvider>
-        <div className="firstContainer">
+        <div className="container-one">
           <InputForm />
           <Chart />
         </div>
-        <DataTable />
+        <div className="container-two">
+          <DataTable />
+        </div>
       </ValueArrayProvider>
-        <Footer />
+      <Footer />
     </div>
   );
 }

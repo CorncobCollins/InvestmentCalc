@@ -32,7 +32,6 @@ function Chart() {
             name="Total Amount"
             stroke="black"
             dot={false}
-            yAxisId="left"
           />
           <Line
             type="monotone"
@@ -40,7 +39,6 @@ function Chart() {
             name="Total Yield"
             stroke="white" 
             dot={false}
-            yAxisId="right"
           />
           <CartesianGrid stroke="white" />
           <XAxis
@@ -52,16 +50,7 @@ function Chart() {
           <YAxis
             type="number"
             stroke="white"
-            yAxisId="left"
             label={{ value: "Total Value", angle: -90, dx: -20 }}
-          />
-           <YAxis
-            type="number"
-            dataKey="totalYield"
-            stroke="white"
-            yAxisId="right"
-            label={{ value: "Total Yield", angle: 90, dx: 20, fill:"white"}}
-            orientation="right"
           />
           <Legend
             align="left"
@@ -76,6 +65,7 @@ function Chart() {
       </div>
     </div>
   );
+  console.log(valueArray)
 }
 else return ("")
 }

@@ -12,6 +12,23 @@ import { ValueArrayContext } from "./ValueArrayContext";
 
 function Chart() {
   const [valueArray, ] = useContext(ValueArrayContext);
+
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="tooltip">
+         <p>Month{"\u00A0"}{`${payload[0].payload.id}`}</p>
+         <p>Total Value:{"\u00A0"}{`${payload[0].value}`}$</p>
+         <p>Gain:{"\u00A0"}{`${payload[1].value}`}$</p>
+        </div>
+      )
+     }
+  
+    return null
+  }
+
+
   if (valueArray !== "" && !isNaN(valueArray[1].totalAmount)){
   return (
     <div className="placer">
@@ -60,7 +77,7 @@ function Chart() {
               bottom: "10px",
             }}
           />
-          <Tooltip />
+          <Tooltip content={<CustomTooltip />} />
         </LineChart>
       </div>
       </div>

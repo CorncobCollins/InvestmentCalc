@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   Legend,
+  Tooltip
 } from "recharts";
 import { ValueArrayContext } from "./ValueArrayContext";
 
@@ -36,7 +37,7 @@ function Chart() {
             type="monotone"
             dataKey="totalYield"
             name="Total Yield"
-            stroke="white" 
+            stroke="purple" 
             dot={false}
           />
           <CartesianGrid stroke="white" />
@@ -46,9 +47,8 @@ function Chart() {
             stroke="white"
             label={{ value: "Months", position: "insideBottom", dy: 20 }}
           />
-          <YAxis
+          <YAxis       
             type="number"
-            dataKey="totalAmount"
             stroke="white"
             label={{ value: "Value in $", angle: -90, dx: -20 }}
           />
@@ -60,6 +60,7 @@ function Chart() {
               bottom: "10px",
             }}
           />
+          <Tooltip />
         </LineChart>
       </div>
       </div>

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ValueArrayContext } from "./ValueArrayContext";
 
-let bigArr;
 function InputForm() {
   const [valueArray, setValueArray] = useContext(ValueArrayContext);
   const [investinit, setInvestinit] = useState("");
@@ -28,24 +27,22 @@ function InputForm() {
 
   }
 
-   function calcMoney(moneyValues) {
-    bigArr = [
+    function calcMoney(moneyValues) {
+    var bigArr = [
       { totalAmount: moneyValues.investinit, totalYield: 0, id: 0, totalMonthly: moneyValues.deposit },
     ];
     var monthlyInterest = moneyValues.interest / 1200 + 1;
 
     for (var i = 1; i < 61; i = i + 1) {
-      var newTotal =
-        moneyValues.investinit * Math.pow(monthlyInterest, i) +
-        moneyValues.deposit * ((Math.pow(monthlyInterest, i) - 1) / (monthlyInterest - 1));
+      var newTotal = moneyValues.investinit * Math.pow(monthlyInterest, i) + moneyValues.deposit * ((Math.pow(monthlyInterest, i) - 1) / (monthlyInterest - 1));
       var totalMonthly = moneyValues.deposit * i;
       var gain = newTotal - (moneyValues.investinit + totalMonthly);
       var totalInvested= moneyValues.investinit + totalMonthly;
 
       bigArr.push({
-        totalAmount: parseFloat(newTotal).toFixed(2),
         id: i,
-        totalYield: parseFloat(gain).toFixed(2),
+        totalAmount: parseFloat(newTotal.toFixed(2)),
+        totalYield: parseFloat(gain.toFixed(2)),
         totalMonthly: totalMonthly,
         totalInvested: totalInvested,
       });
@@ -98,4 +95,4 @@ function InputForm() {
     </div>
   );
 }
-export { InputForm, bigArr };
+export { InputForm };

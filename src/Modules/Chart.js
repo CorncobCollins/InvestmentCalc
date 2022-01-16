@@ -18,9 +18,9 @@ function Chart() {
     if (active && payload && payload.length) {
       return (
         <div className="tooltip">
-         <p>Month{"\u00A0"}{`${payload[0].payload.id}`}</p>
+         <p style={{color:"grey", textDecoration:"underline grey"}}>Month{"\u00A0"}{`${payload[0].payload.id}`}</p>
          <p>Total Value:{"\u00A0"}{`${payload[0].value}`}$</p>
-         <p>Gain:{"\u00A0"}{`${payload[1].value}`}$</p>
+         <p style={{color:"purple"}}>Gain:{"\u00A0"}{`${payload[1].value}`}$</p>
         </div>
       )
      }
@@ -74,7 +74,7 @@ function Chart() {
             wrapperStyle={{
               position: "relative",
               marginLeft: "50px",
-              bottom: "10px",
+              bottom: "30px",
             }}
           />
           <Tooltip content={<CustomTooltip />} />

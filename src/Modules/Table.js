@@ -18,14 +18,6 @@ function DataTable() {
             </tr>
           </thead>
           <tbody>
-          <tr>
-              <td className="table-info">Total Invested</td>
-              <td>{valueArray[12].totalInvested}$</td>
-              <td>{valueArray[24].totalInvested}$</td>
-              <td>{valueArray[36].totalInvested}$</td>
-              <td>{valueArray[48].totalInvested}$</td>
-              <td>{valueArray[60].totalInvested}$</td>
-            </tr>
             <tr>
               <td className="table-info">Total Value</td>
               <td>{valueArray[12].totalAmount}$</td>
@@ -41,6 +33,14 @@ function DataTable() {
               <td>{valueArray[36].totalYield}$</td>
               <td>{valueArray[48].totalYield}$</td>
               <td>{valueArray[60].totalYield}$</td>
+            </tr>
+            <tr>
+              <td className="table-info">Total Invested</td>
+              <td>{valueArray[12].totalInvested}$</td>
+              <td>{valueArray[24].totalInvested}$</td>
+              <td>{valueArray[36].totalInvested}$</td>
+              <td>{valueArray[48].totalInvested}$</td>
+              <td>{valueArray[60].totalInvested}$</td>
             </tr>
           </tbody>
         </table>
